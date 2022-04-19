@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { faBell, faBlackboard, faIdBadge, faSignOutAlt, faUser, faUserCircle, faBars, faGraduationCap, faBookOpen, faBook, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 
 const Dashboard = () => {
    const rootUrl = '/';
@@ -30,52 +31,52 @@ const Dashboard = () => {
             <ul>
                <li>
                   <a href={profileUrl}>
-                     <FontAwesomeIcon icon="fa fa-id-badge" /> <span className="ml-1">My Account</span>
+                     <FontAwesomeIcon icon={faIdBadge} /> <span className="ml-1">My Account</span>
                   </a>
                </li>
                <li>
                   <a href={dashboardUrl} title="Dashboard">
-                     <FontAwesomeIcon icon="fas fa-user" /> <span className="hide-sm ml-1">Dashboard</span>
+                     <FontAwesomeIcon icon={faUser} /> <span className="hide-sm ml-1">Dashboard</span>
                   </a>
                </li>
                <li>
                   <a href={noticesDashboardUrl} title="Dashboard">
-                     <FontAwesomeIcon icon="fa fa-bell" /> <span className="hide-sm ml-1">Notices</span>
+                     <FontAwesomeIcon icon={faBell} /> <span className="hide-sm ml-1">Notices</span>
                   </a>
                </li>
                <li>
                   <a href={loginUrl}>
-                     <FontAwesomeIcon icon="fas fa-sign-out-alt" />
-                     <span className="hide-sm">Logout</span>
+                     <FontAwesomeIcon icon={faSignOutAlt} />
+                     <span className="hide-sm ml-1">Logout</span>
                   </a>
                </li>
             </ul>
-            <FontAwesomeIcon icon="fa fa-user-plus" classNameName="burger-icon" />
+            <FontAwesomeIcon icon={faBars} className="burger-icon" />
          </nav>
 
          <section className="container">
             <h1 className="large text-primary">Dashboard</h1>
             <p className="lead">
-               <FontAwesomeIcon icon="fas fa-User" /> Welcome John Doe
+               <FontAwesomeIcon icon={faUser} /> Welcome John Doe
             </p>
             <div className="dash-buttons">
                <a href={createProfileUrl} className="btn">
-                  <FontAwesomeIcon className="text-primary" icon="fas fa-user-circle" /> Edit Profile
+                  <FontAwesomeIcon className="text-primary" icon={faUserCircle} /> Edit Profile
                </a>
                <a href={addExperienceUrl} className="btn">
-                  <FontAwesomeIcon className="text-primary" icon="fab fa-black-tie" /> Add Experience
+                  <FontAwesomeIcon className="text-primary" icon={faBlackboard} /> Add Experience
                </a>
                <a href={addEducationUrl} className="btn">
-                  <FontAwesomeIcon className="text-primary" icon="fas fa-graduation-cap" /> Add Education
+                  <FontAwesomeIcon className="text-primary" icon={faGraduationCap} /> Add Education
                </a>
                <a href={addNoticeUrl} className="btn">
-                  <FontAwesomeIcon className="text-primary" icon="fas fa-book-open" /> Add Notice
+                  <FontAwesomeIcon className="text-primary" icon={faBookOpen} /> Add Notice
                </a>
                <a href={addExamUrl} className="btn">
-                  <FontAwesomeIcon className="text-primary" icon="fas fa-book" /> Create Exam
+                  <FontAwesomeIcon className="text-primary" icon={faBook} /> Create Exam
                </a>
                <a href={coursesUrl} className="btn">
-                  <FontAwesomeIcon className="text-primary" icon="fas fa-laptop-code" /> My Courses
+                  <FontAwesomeIcon className="text-primary" icon={faLaptopCode} /> My Courses
                </a>
             </div>
 

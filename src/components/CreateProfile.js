@@ -2,6 +2,8 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { faBell, faIdBadge, faSignOutAlt, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
+import twitter from '../images/twitter-brands.svg';
 
 const CreateProfile = () => {
    const rootUrl = '/';
@@ -23,33 +25,33 @@ const CreateProfile = () => {
             <ul>
                <li>
                   <a href={profileUrl}>
-                     <FontAwesomeIcon icon="fa fa-id-badge" /> <span className="ml-1">My Account</span>
+                     <FontAwesomeIcon icon={faIdBadge} /> <span className="ml-1">My Account</span>
                   </a>
                </li>
                <li>
                   <a href={dashboardUrl} title="Dashboard">
-                     <FontAwesomeIcon icon="fas fa-user" /> <span className="hide-sm ml-1">Dashboard</span>
+                     <FontAwesomeIcon icon={faUser} /> <span className="hide-sm ml-1">Dashboard</span>
                   </a>
                </li>
                <li>
                   <a href={noticesDashboardUrl} title="Dashboard">
-                     <FontAwesomeIcon icon="fa fa-bell" /> <span className="hide-sm ml-1">Notices</span>
+                     <FontAwesomeIcon icon={faBell} /> <span className="hide-sm ml-1">Notices</span>
                   </a>
                </li>
                <li>
                   <a href={loginUrl}>
-                     <FontAwesomeIcon icon="fas fa-sign-out-alt" />
-                     <span className="hide-sm">Logout</span>
+                     <FontAwesomeIcon icon={faSignOutAlt} />
+                     <span className="hide-sm ml-1">Logout</span>
                   </a>
                </li>
             </ul>
-            <FontAwesomeIcon icon="fa fa-user-plus" classNameName="burger-icon" />
+            <FontAwesomeIcon icon={faBars} className="burger-icon" />
          </nav>
 
          <section className="container">
             <h1 className="large text-primary">Create Your Profile</h1>
             <p className="lead">
-               <FontAwesomeIcon icon="fas fa-user" /> Let's get some Information to make you profile stand out
+               <FontAwesomeIcon icon={faUser} /> Let's get some Information to make you profile stand out
             </p>
             <small>* = required fileds</small>
             <form className="form">
@@ -100,7 +102,7 @@ const CreateProfile = () => {
                </div>
 
                <div className="form-group social-input">
-                  <FontAwesomeIcon icon="fab fa-twitter fa-2x" />
+                  <FontAwesomeIcon icon="fa-brands fa-twitter" />
                   <input type="text" placeholder="Twitter URL" name="twitter" />
                </div>
 

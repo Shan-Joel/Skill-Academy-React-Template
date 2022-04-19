@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { faBell, faGlobe, faIdBadge, faUser, faBars, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Profile = () => {
    const rootUrl = '/';
@@ -25,27 +26,27 @@ const Profile = () => {
             <ul>
                <li>
                   <a href={profileUrl}>
-                     <FontAwesomeIcon icon="fa fa-id-badge" /> <span className="ml-1">My Account</span>
+                     <FontAwesomeIcon icon={faIdBadge} /> <span className="ml-1">My Account</span>
                   </a>
                </li>
                <li>
                   <a href={dashboardUrl} title="Dashboard">
-                     <FontAwesomeIcon icon="fas fa-user" /> <span className="hide-sm ml-1">Dashboard</span>
+                     <FontAwesomeIcon icon={faUser} /> <span className="hide-sm ml-1">Dashboard</span>
                   </a>
                </li>
                <li>
                   <a href={noticesDashboardUrl} title="Dashboard">
-                     <FontAwesomeIcon icon="fa fa-bell" /> <span className="hide-sm ml-1">Notices</span>
+                     <FontAwesomeIcon icon={faBell} /> <span className="hide-sm ml-1">Notices</span>
                   </a>
                </li>
                <li>
                   <a href={loginUrl}>
-                     <FontAwesomeIcon icon="fa fa-bell" />
-                     <span className="hide-sm">Logout</span>
+                     <FontAwesomeIcon icon={faBell} />
+                     <span className="hide-sm ml-1">Logout</span>
                   </a>
                </li>
             </ul>
-            <FontAwesomeIcon icon="fa fa-user-plus" classNameName="burger-icon" />
+            <FontAwesomeIcon icon={faBars} className="burger-icon" />
          </nav>
 
          <section className="container">
@@ -62,7 +63,7 @@ const Profile = () => {
                   <p>Seattle, Washington</p>
                   <div className="icons my-1">
                      <a href="#">
-                        <FontAwesomeIcon icon="fas fa-globe fa-2x" />
+                        <FontAwesomeIcon icon={faGlobe} />
                      </a>
 
                      <a href="#">
@@ -91,25 +92,25 @@ const Profile = () => {
                   <h2 className="text-primary">Skill Set</h2>
                   <div className="skills">
                      <div className="p-1">
-                        <FontAwesomeIcon icon="fas fa-check" /> HTML
+                        <FontAwesomeIcon icon={faCheck} /> HTML
                      </div>
                      <div className="p-1">
-                        <FontAwesomeIcon icon="fas fa-check" /> CSS
+                        <FontAwesomeIcon icon={faCheck} /> CSS
                      </div>
                      <div className="p-1">
-                        <FontAwesomeIcon icon="fas fa-check" /> Sass
+                        <FontAwesomeIcon icon={faCheck} /> Sass
                      </div>
                      <div className="p-1">
-                        <FontAwesomeIcon icon="fas fa-check" /> JavaScript
+                        <FontAwesomeIcon icon={faCheck} /> JavaScript
                      </div>
                      <div className="p-1">
-                        <FontAwesomeIcon icon="fas fa-check" /> Typescript
+                        <FontAwesomeIcon icon={faCheck} /> Typescript
                      </div>
                      <div className="p-1">
-                        <FontAwesomeIcon icon="fas fa-check" /> React.JS
+                        <FontAwesomeIcon icon={faCheck} /> React.JS
                      </div>
                      <div className="p-1">
-                        <FontAwesomeIcon icon="fas fa-check" /> Angular
+                        <FontAwesomeIcon icon={faCheck} /> Angular
                      </div>
                   </div>
                </div>

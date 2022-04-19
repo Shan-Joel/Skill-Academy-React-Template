@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { faBell, faIdBadge, faSignOutAlt, faThumbsDown, faThumbsUp, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const AddNotice = () => {
    const rootUrl = '/';
@@ -23,33 +24,33 @@ const AddNotice = () => {
             <ul>
                <li>
                   <a href={profileUrl}>
-                     <FontAwesomeIcon icon="fa fa-id-badge" /> <span className="ml-1">My Account</span>
+                     <FontAwesomeIcon icon={faIdBadge} /> <span className="ml-1">My Account</span>
                   </a>
                </li>
                <li>
-                  <a href="dashboard.html" title="Dashboard">
-                     <FontAwesomeIcon icon="fas fa-user" /> <span className="hide-sm ml-1">Dashboard</span>
+                  <a href={dashboardUrl} title="Dashboard">
+                     <FontAwesomeIcon icon={faUser} /> <span className="hide-sm ml-1">Dashboard</span>
                   </a>
                </li>
                <li>
-                  <a href="notices-dashboard.html" title="Dashboard">
-                     <FontAwesomeIcon icon="fa fa-bell" /> <span className="hide-sm ml-1">Notices</span>
+                  <a href={noticesDashboardUrl} title="Dashboard">
+                     <FontAwesomeIcon icon={faBell} /> <span className="hide-sm ml-1">Notices</span>
                   </a>
                </li>
                <li>
                   <a href={loginUrl}>
-                     <FontAwesomeIcon icon="fas fa-sign-out-alt" />
-                     <span className="hide-sm">Logout</span>
+                     <FontAwesomeIcon icon={faSignOutAlt} />
+                     <span className="hide-sm ml-1">Logout</span>
                   </a>
                </li>
             </ul>
-            <FontAwesomeIcon icon="fa fa-user-plus" classNameName="burger-icon" />
+            <FontAwesomeIcon icon={faBars} className="burger-icon" />
          </nav>
 
          <section className="container">
             <h1 className="large text-primary">Notices</h1>
             <p className="lead">
-               <FontAwesomeIcon icon="fas fa-User" /> Welcome to the Community
+               <FontAwesomeIcon icon={faUser} /> Welcome to the Community
             </p>
             <div className="post-form">
                <div className="post-form-header bg-primary">
@@ -71,10 +72,10 @@ const AddNotice = () => {
                      <div>
                         <p className="my-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione dolores officia assumenda dolor maiores sint pariatur quia voluptatibus voluptate perspiciatis commodi possimus nemo aut, voluptas expedita facilis amet hic culpa.</p>
                         <button className="btn">
-                           <FontAwesomeIcon icon="fas fa-thumbs-up" /> <span>4</span>
+                           <FontAwesomeIcon icon={faThumbsUp} /> <span>4</span>
                         </button>
                         <button className="btn">
-                           <FontAwesomeIcon icon="fas fa-thumbs-down" />
+                           <FontAwesomeIcon icon={faThumbsDown} />
                         </button>
                         <a href={postUrl} className="btn btn-primary">
                            Discussion
@@ -93,10 +94,10 @@ const AddNotice = () => {
                      <div>
                         <p className="my-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione dolores officia assumenda dolor maiores sint pariatur quia voluptatibus voluptate perspiciatis commodi possimus nemo aut, voluptas expedita facilis amet hic culpa.</p>
                         <button className="btn">
-                           <FontAwesomeIcon icon="fas fa-thumbs-up" /> <span>4</span>
+                           <FontAwesomeIcon icon={faThumbsUp} /> <span>4</span>
                         </button>
                         <button className="btn">
-                           <FontAwesomeIcon icon="fas fa-thumbs-down" />
+                           <FontAwesomeIcon icon={faThumbsDown} />
                         </button>
                         <a href={postUrl} className="btn btn-primary">
                            Discussion

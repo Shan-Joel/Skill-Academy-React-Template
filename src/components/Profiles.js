@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { faCheck, faCode, faIdBadge, faSignOutAlt, faSquarePersonConfined, faBars, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Profiles = () => {
    const rootUrl = '/';
@@ -26,35 +27,35 @@ const Profiles = () => {
                <li>
                   <a href={profileUrl}>
                      <i className="fa fa-id-badge"></i>
-                     <FontAwesomeIcon icon="fas fa-code" /> <span className="ml-1">My Account</span>
+                     <FontAwesomeIcon icon={faIdBadge} /> <span className="ml-1">My Account</span>
                   </a>
                </li>
                <li>
                   <a href={dashboardUrl} title="Dashboard">
                      <i className="fas fa-user"></i>
-                     <FontAwesomeIcon icon="fas fa-code" /> <span className="hide-sm ml-1">Dashboard</span>
+                     <FontAwesomeIcon icon={faUser} /> <span className="hide-sm ml-1">Dashboard</span>
                   </a>
                </li>
                <li>
                   <a href={noticesDashboardUrl} title="Dashboard">
                      <i className="fa fa-bell"></i>
-                     <FontAwesomeIcon icon="fas fa-code" /> <span className="hide-sm ml-1">Notices</span>
+                     <FontAwesomeIcon icon={faBell} /> <span className="hide-sm ml-1">Notices</span>
                   </a>
                </li>
                <li>
                   <a href={loginUrl}>
-                     <FontAwesomeIcon icon="fas fa-sign-out-alt" />
+                     <FontAwesomeIcon icon={faSignOutAlt} />
                      <span className="hide-sm ml-1">Logout</span>
                   </a>
                </li>
             </ul>
-            <FontAwesomeIcon icon="fa fa-user-plus" classNameName="burger-icon" />
+            <FontAwesomeIcon icon={faBars} className="burger-icon" />
          </nav>
 
          <section className="container">
             <h1 className="large text-primary">Hi, John Doe</h1>
             <p className="lead">
-               <FontAwesomeIcon icon="fab fa-connectdevelop" /> Click view profile to see all details
+               <FontAwesomeIcon icon={faSquarePersonConfined} /> Click view profile to see all details
             </p>
             <div className="profiles">
                <div className="profile bg-light">
@@ -71,16 +72,16 @@ const Profiles = () => {
 
                   <ul>
                      <li className="text-primary">
-                        <FontAwesomeIcon icon="fas fa-check" /> HTML
+                        <FontAwesomeIcon icon={faCheck} /> HTML
                      </li>
                      <li className="text-primary">
-                        <FontAwesomeIcon icon="fas fa-check" /> CSS
+                        <FontAwesomeIcon icon={faCheck} /> CSS
                      </li>
                      <li className="text-primary">
-                        <FontAwesomeIcon icon="fas fa-check" /> JavaScript
+                        <FontAwesomeIcon icon={faCheck} /> JavaScript
                      </li>
                      <li className="text-primary">
-                        <FontAwesomeIcon icon="fas fa-check" /> Python
+                        <FontAwesomeIcon icon={faCheck} /> Python
                      </li>
                   </ul>
                </div>

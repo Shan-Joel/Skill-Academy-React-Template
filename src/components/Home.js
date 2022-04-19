@@ -1,7 +1,10 @@
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faUserCheck } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
    //Links
@@ -20,19 +23,20 @@ const Home = () => {
             <ul>
                <li>
                   <a href={registerUrl}>
-                     <FontAwesomeIcon icon="fa fa-user-plus" />
+                     {/* <FontAwesomeIcon icon="fa fa-user-plus" /> */}
+                     <FontAwesomeIcon icon={faUserPlus} />
                      <span className="ml-1">Register</span>
                   </a>
                </li>
                <li>
                   <a href={loginUrl}>
-                     <FontAwesomeIcon icon="fa fa-user-check" />
+                     <FontAwesomeIcon icon={faUserCheck} />
                      <span className="ml-1">Login</span>
                   </a>
                </li>
             </ul>
 
-            <FontAwesomeIcon icon="fa fa-user-plus" className="burger-icon" />
+            <FontAwesomeIcon icon={faBars} className="burger-icon" />
          </nav>
 
          <section className="landing">

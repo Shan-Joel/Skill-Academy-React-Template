@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import googleAuthImg from '../images/google-auth-removebg-preview.png';
+import { faCode, faUserCheck, faUserPlus, faBars, faUser, faIdBadge } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
    //Links
@@ -22,21 +23,21 @@ const Login = () => {
             <ul>
                <li>
                   <a href={profileUrl}>
-                     <FontAwesomeIcon icon="fas fa-code" /> <span className="ml-1">My Account</span>
+                     <FontAwesomeIcon icon={faIdBadge} /> <span className="ml-1">My Account</span>
                   </a>
                </li>
                <li>
                   <a href={registerUrl}>
-                     <FontAwesomeIcon icon="fa fa-user-plus" /> <span className="ml-1">Register</span>
+                     <FontAwesomeIcon icon={faUserPlus} /> <span className="ml-1">Register</span>
                   </a>
                </li>
                <li>
                   <a href={loginUrl}>
-                     <FontAwesomeIcon icon="fa fa-user-check" /> <span className="ml-1">Login</span>
+                     <FontAwesomeIcon icon={faUserCheck} /> <span className="ml-1">Login</span>
                   </a>
                </li>
             </ul>
-            <FontAwesomeIcon icon="fa fa-bars" className="burger-icon" />
+            <FontAwesomeIcon icon={faBars} className="burger-icon" />
          </nav>
 
          <section className="container">
@@ -46,7 +47,7 @@ const Login = () => {
 
             <h1 className="large text-primary">Sign In</h1>
             <p className="lead">
-               <FontAwesomeIcon icon="fas fa-user" /> Sign into Your Account
+               <FontAwesomeIcon icon={faUser} /> Sign into Your Account
             </p>
 
             <form action="dashboard.html" className="form">
